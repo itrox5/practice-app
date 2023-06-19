@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
+ 
     path('admin/', admin.site.urls),
     # If first URL parameter is challenges access challenges APP
     path("challenges/", include("challenges.urls"))
