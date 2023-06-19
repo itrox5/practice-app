@@ -40,9 +40,11 @@ def monthly_challenge_by_number(request, month):
 def monthly_challenge(request, month):
   try:
     challenge_text = monthly_challenges[month.lower()]
-    return HttpResponse(challenge_text)
+    response_data = f"<h1>{challenge_text}</h1>"
+   # return HttpResponse(challenge_text)
+    return HttpResponse(response_data)
   except:
-    return HttpResponseNotFound("This is not a month")
+    return HttpResponseNotFound("<h1>This is not a month</h1>")
  
 
 # Long if statement version
